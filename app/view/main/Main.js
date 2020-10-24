@@ -43,9 +43,9 @@ Ext.define('myapp.view.main.Main', {
         },{
             title: 'Users',
             iconCls: 'x-fa fa-user',
-            bind: {
-                html: '{loremIpsum}'
-            }
+            items: [{
+                xtype: 'mainlist'
+            }]
         },{
             title: 'Groups',
             iconCls: 'x-fa fa-users',
