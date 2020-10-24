@@ -30,7 +30,7 @@ Ext.define('myapp.view.main.dataview', {
             scrollable: 'y',
             cls: 'dataview-basic',
             itemTpl: '<div class="card" style="width:300px">' +
-            '<img class="card-img-top" style="width:20% height:auto" src="{gambar}">' +
+            '<img class="card-img-top" style="width:30% height:auto" src="{gambar}">' +
             '<div class="card-body">' +
             '<h2 class="card-title">Nama: {name}</h2>' +
             '<p class="card-text">Email: {email}</p>' + 
