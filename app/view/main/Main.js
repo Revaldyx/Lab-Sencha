@@ -49,9 +49,9 @@ Ext.define('myapp.view.main.Main', {
         },{
             title: 'Groups',
             iconCls: 'x-fa fa-users',
-            bind: {
-                html: '{loremIpsum}'
-            }
+            items: [{
+                xtype: 'bdv'
+            }]
         },{
             title: 'Settings',
             iconCls: 'x-fa fa-cog',

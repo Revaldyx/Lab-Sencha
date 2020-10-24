@@ -1,10 +1,11 @@
 Ext.define('myapp.view.main.dataview', {
+    xtype:'bdv',
     extend: 'Ext.Container',
-    xtype:'userdataview',
+
     requires: [
-    'myapp.model.Speaker',
     'Ext.dataview.plugin.ItemTip',
-    'Ext.plugin.Responsive'
+    'Ext.plugin.Responsive',
+    'myapp.store.Personnel'
     ],
 
     controller: 'main',
@@ -13,24 +14,41 @@ Ext.define('myapp.view.main.dataview', {
     layout: 'fit',
     cls: 'ks-basic demo-solid-background',
     shadow: true,
-    items: [{
-        xtype: 'dataview',
-        scrollable: 'y',
-        cls: 'dataview-basic', 
-        itemTpl: '<div class="card"><img src=/resources/{gambar} width=150 height=150 class="img gambar"/><div class="header">{name}</div><div class="container"><br>{email}<br>{phone}<br><button type="button" class="btn btn-primary">Primary</button></div></div><br>',
-        store: {
-            type:'personnel',
-        },
-        listeners: {
-           itemclick: function(view, record, item, index, e, eOpts) {
-        },
-        click: {
-            element: 'element',
-            delegate: '.btn-primary',
-            fn: function() {
-                Ext.Msg.alert('Title', 'The quick brown fox jumped over the lazy dog.', Ext.emptyFn);
+    viewModel:{
+        stores:{
+            personnel: {
+                type:'personnel'
             }
         }
-    } 
-    }]
+    },
+    items:[{
+        title:'Data Karyawan',
+        xtype: 'panel',
+        scrollable: 'y',
+        items: [{
+            xtype: 'dataview',
+            scrollable: 'y',
+            cls: 'dataview-basic',
+            itemTpl: '<div class="card" style="width:300px">' +
+            '<img class="card-img-top" style="width:30% height:auto" src="{gambar}">' +
+            '<div class="card-body">' +
+            '<h2 class="card-title">Nama: {name}</h2>' +
+            '<p class="card-text">Email: {email}</p>' +
+            '<p class="card-text">Phone: {phone}</p><br>' +
+            '<button class="btn btn-primary">Detail</button>' +
+            '</div>' +
+            '</div><br>',
+            bind:{
+                store: '{personnel}'
+            }
+        }],
+    }],
+    listeners: {
+         element: 'element',
+         delegate: '.btn',
+         bind:'{record}',
+        Click: function (out, values, parent, xindex, xcount, xkey) {
+             Ext.Msg.alert('Detail','ini adalah detail', Ext.emptyFn);
+        },
+    }
 });
