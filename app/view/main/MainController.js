@@ -1,9 +1,3 @@
-/**
- * This class is the controller for the main view for the application. It is specified as
- * the "controller" of the Main view class.
- *
- * TODO - Replace this content of this view to suite the needs of your application.
- */
 Ext.define('myapp.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
@@ -13,14 +7,39 @@ Ext.define('myapp.view.main.MainController', {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
 
+    onClickButton: function(){
+        Ext.Msg.confirm('Logout', 'Apakah anda mau Logout?', 'onConfirm', this); 
+    },
+
     onConfirm: function (choice) {
         if (choice === 'yes') {
-            //
+            localStorage.removeItem('loggedIn'); //remove session login
+            this.getView().destroy(); //destroy tampilan main.js
+            Ext.getCmp('formlogin').destroy(); //destroy isi formlogin
+            this.overlay = Ext.Viewport.add({ //membuat viewport login
+                xtype: 'login',
+                floated: true,
+                showAnimation: {
+                    type: 'popIn',
+                    duration: 250,
+                    easing: 'ease-out'
+                },
+                hideAnimation: {
+                    type: 'popOut',
+                    duration: 250,
+                    easing: 'ease-out'
+                },
+                width: "100%",
+                height: "100%",
+                scrollable: true
+            });
+            this.overlay.show();
         }
     },
     onInputChange: function(newValue, oldValue){
         keyword = Ext.getCmp('search').getValue();
         personnelStore = Ext.getStore('personnel');
         personnelStore.filter('name', keyword);
-    }
+    },
+    
 });

@@ -805,11 +805,14 @@ $include-myapp-store-personnel: dynamic(true);;
 $include-myapp-store-karyawan: dynamic(true);;
 $include-myapp-view-chart-column: dynamic(true);;
 $include-myapp-view-chart-columncontroller: dynamic(true);;
+$include-myapp-view-form-login: dynamic(true);;
+$include-myapp-view-form-logincontroller: dynamic(true);;
 $include-myapp-view-main-list: dynamic(true);;
 $include-myapp-view-main-main: dynamic(true);;
 $include-myapp-view-main-maincontroller: dynamic(true);;
 $include-myapp-view-main-mainmodel: dynamic(true);;
 $include-myapp-view-main-dataview: dynamic(true);;
+$include-myapp-view-main-logout: dynamic(true);;
 $output-paths: ("path": "../resources");
 
 /* ======================== ETC ======================== */

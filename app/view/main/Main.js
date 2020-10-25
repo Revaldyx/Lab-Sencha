@@ -16,7 +16,8 @@ Ext.define('myapp.view.main.Main', {
         'myapp.view.main.MainModel',
         'myapp.view.main.List',
         'myapp.view.main.dataview',
-        'myapp.view.chart.Column'
+        'myapp.view.chart.Column',
+        'myapp.view.main.logout',
     ],
 
     controller: 'main',
@@ -54,11 +55,12 @@ Ext.define('myapp.view.main.Main', {
                 xtype: 'bdv'
             }]
         },{
-            title: 'Settings',
+            title: 'Logout',
             iconCls: 'x-fa fa-cog',
-            bind: {
-                html: '{loremIpsum}'
-            }
+            layout: 'fit',
+            items: [{
+                xtype: 'logout'
+            }]
         }
     ]
 });
