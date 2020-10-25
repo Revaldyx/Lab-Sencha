@@ -13,7 +13,7 @@ Ext.define('myapp.view.form.loginController', {
             form.hide();
         }
         else {
-            Ext.Msg.alert('Konfirmasi', 'Username/Password Anda Salah', this).setValue();
+            Ext.Msg.alert('Konfirmasi', 'Username/Password Anda Salah', this);
         }
     },
    

@@ -25,7 +25,7 @@ Ext.define('myapp.view.main.logout', {
         {
             xtype: 'button',
             reference: 'button',
-            text: 'Button',
+            text: 'Logout',
             margin: '0 0 16 0',
             handler: 'onClickButton'
         },

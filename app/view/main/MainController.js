@@ -33,6 +33,7 @@ Ext.define('myapp.view.main.MainController', {
                 height: "100%",
                 scrollable: true
             });
+            Ext.Msg.alert('Logout', 'Berhasil Logout.', Ext.emptyFn);
             this.overlay.show();
         }
     },

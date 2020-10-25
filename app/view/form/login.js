@@ -20,7 +20,6 @@ Ext.define('myapp.view.form.login', {
                 labelWidth: '35%'
             },
             items: [
-
                 {
                     xtype: 'textfield',
                     name: 'name',
