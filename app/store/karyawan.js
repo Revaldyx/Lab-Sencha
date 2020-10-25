@@ -20,7 +20,4 @@ Ext.define('myapp.store.karyawan', {
         { bulan: 'Nov', jumlah: 17,  },
         { bulan: 'Dec', jumlah: 14,  }
     ],
-
-    counter: 0,
-
 });

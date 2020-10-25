@@ -31,10 +31,6 @@ Ext.define('myapp.view.chart.Column', {
                 }
             },
             handler: 'onDownload' // handler buat dowload di column controllwe
-        }, {
-            text: 'Reload',
-            iconCls: 'x-fa fa-refresh', 
-            handler: 'onReloadData' //handler buat reload
         }]
     }, {
         xtype: 'cartesian',
@@ -59,13 +55,6 @@ Ext.define('myapp.view.chart.Column', {
             }
         },
         interactions: [
-        //     {
-        //     type: 'itemedit',
-        //     tooltip: {
-        //         renderer: 'onEditTipRender'  //interaksi buat edit column 
-        //     },
-        //     renderer: 'onColumnEdit'
-        // }, 
         {
             type: 'panzoom',
             axes: {
@@ -87,9 +76,6 @@ Ext.define('myapp.view.chart.Column', {
             title: {
                 text: 'Jumlah karyawan'            //text di axes nya (di samping)
             },
-            // listeners: {
-            //     rangechange: 'onAxisRangeChange' //ubah range 
-            // }
         }, {
             type: 'category',
             position: 'bottom',
@@ -102,7 +88,7 @@ Ext.define('myapp.view.chart.Column', {
         }],
         series: {
             type: 'bar',
-            xField: 'bulan',
+            xField: 'bulan', 
             yField: 'jumlah',
             style: {
                 minGapWidth: 20 // jarak tiap bar
@@ -124,12 +110,7 @@ Ext.define('myapp.view.chart.Column', {
             height: 30,
             x: 30, // the sprite x position
             y: 30  // the sprite y position
-        },
-        // listeners: {
-        //     afterrender: 'onAfterRender',
-        //     beginitemedit: 'onBeginItemEdit',
-        //     enditemedit: 'onEndItemEdit'
-        // }
+        }
     }]
 
 });
