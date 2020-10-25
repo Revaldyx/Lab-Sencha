@@ -49,6 +49,7 @@ Ext.define('myapp.view.main.Main', {
         },{
             title: 'Groups',
             iconCls: 'x-fa fa-users',
+            layout: 'fit',
             items: [{
                 xtype: 'bdv'
             }]

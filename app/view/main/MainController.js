@@ -17,5 +17,10 @@ Ext.define('myapp.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
+    },
+    onInputChange: function(newValue, oldValue){
+        keyword = Ext.getCmp('search').getValue();
+        personnelStore = Ext.getStore('personnel');
+        personnelStore.filter('name', keyword);
     }
 });

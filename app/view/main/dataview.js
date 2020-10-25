@@ -21,11 +21,29 @@ Ext.define('myapp.view.main.dataview', {
             }
         }
     },
+    
     items:[{
         title:'Data Karyawan',
         xtype: 'panel',
         scrollable: 'y',
         items: [{
+            items : {
+                docked :'top',
+                    //xtype :'titlebar',
+                    xtype: 'toolbar',
+                    //title :'INFO',
+                    items: [
+                    {
+                        xtype: 'searchfield',
+                        placeHolder: 'Search',
+                        name: 'searchfield',
+                        id: 'search',
+                        listeners: {
+                            change: 'onInputChange'
+                        }
+                    }
+                ]
+            },
             xtype: 'dataview',
             scrollable: 'y',
             cls: 'dataview-basic',
