@@ -69,8 +69,7 @@ Ext.define('myapp.view.form.login', {
                 //     text: 'Daftar',
                 //     ui: 'action',
                 //     handler: 'onRegis',
-                // }
-                },
+                //}
             ]
         }
     ]
