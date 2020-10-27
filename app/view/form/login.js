@@ -65,6 +65,12 @@ Ext.define('myapp.view.form.login', {
                         Ext.getCmp('formlogin').reset();
                     }
                 },
+                // {
+                //     text: 'Daftar',
+                //     ui: 'action',
+                //     handler: 'onRegis',
+                // }
+                },
             ]
         }
     ]
