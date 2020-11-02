@@ -29,13 +29,11 @@ Ext.define('myapp.view.main.dataview', {
         items: [{
             items : {
                 docked :'top',
-                    //xtype :'titlebar',
                     xtype: 'toolbar',
-                    //title :'INFO',
                     items: [
                     {
                         xtype: 'searchfield',
-                        placeHolder: 'Search',
+                        placeHolder: 'Cari Berdasarkan Nama',
                         name: 'searchfield',
                         id: 'search',
                         listeners: {
