@@ -31,6 +31,15 @@ Ext.define('myapp.view.chart.Column', {
                 }
             },
             handler: 'onDownload' // handler buat dowload di column controllwe
+        },{
+            iconCls: 'x-fa fa-info-circle',
+            text:'Bantuan',
+        },{
+            iconCls:'x-fa fa-user',
+            text:'Pengguna'
+        },{
+            iconCls:'x-fa fa-sign-out',
+            text:'Keluar'
         }]
     }, {
         xtype: 'cartesian',
