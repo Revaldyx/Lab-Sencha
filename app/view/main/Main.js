@@ -11,6 +11,8 @@ Ext.define('myapp.view.main.Main', {
         'myapp.view.main.dataview',
         'myapp.view.chart.Column',
         'myapp.view.main.logout',
+        'myapp.view.form.login',
+        'myapp.Application'
     ],
 
     controller: 'main',
