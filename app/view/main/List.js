@@ -15,7 +15,16 @@ Ext.define('myapp.view.main.List', {
         type: 'personnel'
     },
 
+    frame: true,
+
     columns: [
+        {
+            text: 'Photo',
+            dataIndex: 'gambar',
+            width:'300',
+            renderer: function(value){
+                return '<img src=' + value + ' >';
+            },},
         { text: 'Name',  dataIndex: 'name', width: 100 },
         { text: 'Email', dataIndex: 'email', width: 230 },
         { text: 'Phone', dataIndex: 'phone', width: 150 }

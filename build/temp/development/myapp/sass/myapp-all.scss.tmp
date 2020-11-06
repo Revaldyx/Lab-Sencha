@@ -807,6 +807,7 @@ $include-myapp-view-chart-column: dynamic(true);;
 $include-myapp-view-chart-columncontroller: dynamic(true);;
 $include-myapp-view-form-login: dynamic(true);;
 $include-myapp-view-form-logincontroller: dynamic(true);;
+$include-myapp-view-main-carousel: dynamic(true);;
 $include-myapp-view-main-list: dynamic(true);;
 $include-myapp-view-main-main: dynamic(true);;
 $include-myapp-view-main-maincontroller: dynamic(true);;

@@ -11,8 +11,7 @@ Ext.define('myapp.view.main.Main', {
         'myapp.view.main.dataview',
         'myapp.view.chart.Column',
         'myapp.view.main.logout',
-        'myapp.view.form.login',
-        'myapp.Application'
+        'myapp.view.main.Carousel'
     ],
 
     controller: 'main',
@@ -33,13 +32,14 @@ Ext.define('myapp.view.main.Main', {
             iconCls: 'x-fa fa-home',
             layout: 'fit',
             items: [{
-                xtype: 'chartss'
+                xtype: 'mainlist'
             }]
         },{
             title: 'Users',
             iconCls: 'x-fa fa-user',
+            layout:'fit',
             items: [{
-                xtype: 'mainlist'
+                xtype: 'carousell'
             }]
         },{
             title: 'Groups',

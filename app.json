@@ -6,7 +6,7 @@
             "cordova" : {
                 "config": {
                     // Uncomment the line below and add the platforms you wish to build for
-                    "platforms": "android",
+                   "platforms": "android",
 
                     "id": "com.mycompany.MyApp",
                     "name": "MyApp"
