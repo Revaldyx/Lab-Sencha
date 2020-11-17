@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'myapp' );
-$image-search-path: 'C:/Users/Reza/sencha-workstation/myapp/build/development/myapp/resources';
+$image-search-path: '/home/reza/sencha-workstation/myapp/build/development/myapp/resources';
 $theme-name:  dynamic( 'theme-material' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractmanager: dynamic(true);;
@@ -812,8 +812,10 @@ $include-myapp-view-main-list: dynamic(true);;
 $include-myapp-view-main-main: dynamic(true);;
 $include-myapp-view-main-maincontroller: dynamic(true);;
 $include-myapp-view-main-mainmodel: dynamic(true);;
+$include-myapp-view-main-audio: dynamic(true);;
 $include-myapp-view-main-dataview: dynamic(true);;
 $include-myapp-view-main-logout: dynamic(true);;
+$include-myapp-view-main-video: dynamic(true);;
 $output-paths: ("path": "../resources");
 
 /* ======================== ETC ======================== */

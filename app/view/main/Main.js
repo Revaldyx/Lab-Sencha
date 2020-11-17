@@ -11,7 +11,9 @@ Ext.define('myapp.view.main.Main', {
         'myapp.view.main.dataview',
         'myapp.view.chart.Column',
         'myapp.view.main.logout',
-        'myapp.view.main.Carousel'
+        'myapp.view.main.Carousel',
+        'myapp.view.main.audio',
+        'myapp.view.main.video',
     ],
 
     controller: 'main',
@@ -39,14 +41,14 @@ Ext.define('myapp.view.main.Main', {
             iconCls: 'x-fa fa-user',
             layout:'fit',
             items: [{
-                xtype: 'carousell'
+                xtype: 'myaudio1'
             }]
         },{
             title: 'Groups',
             iconCls: 'x-fa fa-users',
             layout: 'fit',
             items: [{
-                xtype: 'bdv'
+                xtype: 'myvideo'
             }]
         },{
             title: 'Logout',
