@@ -41,7 +41,7 @@ Ext.define('myapp.view.main.Main', {
             iconCls: 'x-fa fa-user',
             layout:'fit',
             items: [{
-                xtype: 'myaudio1'
+                xtype:'bdv'
             }]
         },{
             title: 'Groups',

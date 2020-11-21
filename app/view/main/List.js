@@ -1,6 +1,3 @@
-/**
- * This view is an example list of people.
- */
 Ext.define('myapp.view.main.List', {
     extend: 'Ext.grid.Grid',
     xtype: 'mainlist',
@@ -8,26 +5,46 @@ Ext.define('myapp.view.main.List', {
     requires: [
         'myapp.store.Personnel'
     ],
-
+   
     title: 'Personnel',
 
-    store: {
-        type: 'personnel'
+    bind:{
+        store: '{personnel}'
     },
 
-    frame: true,
+    items: [
+        {
+            xtype: 'toolbar',
+            docked: 'top',
+            scrollable: {
+                y: false
+            },
+            items: [
+                {
+                    xtype:'button',
+                    text: 'Load data',
+                    ui: 'action',
+                    scope: this,
+                    listeners:{
+                        tap:'onReadClicked'
+                    }
+                }
+            ]}
+        ],
+
+    viewModel:{
+        stores:{
+            personnel: {
+                type:'personnel'
+            }
+        },
+     },
 
     columns: [
-        {
-            text: 'Photo',
-            dataIndex: 'gambar',
-            width:'300',
-            renderer: function(value){
-                return '<img src=' + value + ' >';
-            },},
         { text: 'Name',  dataIndex: 'name', width: 100 },
         { text: 'Email', dataIndex: 'email', width: 230 },
-        { text: 'Phone', dataIndex: 'phone', width: 150 }
+        { text: 'Phone', dataIndex: 'phone', width: 150 },
+        { text: 'Jurusan', dataIndex: 'jurusan', width: 150 }
     ],
 
     listeners: {

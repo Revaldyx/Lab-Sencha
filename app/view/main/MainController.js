@@ -42,5 +42,8 @@ Ext.define('myapp.view.main.MainController', {
         personnelStore = Ext.getStore('personnel');
         personnelStore.filter('name', keyword);
     },
-    
+
+    onReadClicked:function(){
+        Ext.getStore('personnel').load();
+    }
 });

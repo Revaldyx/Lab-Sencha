@@ -22,24 +22,37 @@ Ext.define('myapp.view.main.audio', {
             }
         }
     },
-    layout: Ext.os.is.Android ? {
+    layout: {
         type: 'vbox',
         pack: 'center',
-        align: 'center'
-    } : 'fit',
+        align: 'stretch'
+    },
     items: Ext.os.is.Android ? [
         {
             xtype: 'audio',
             cls: 'myAudio',
             url: 'resources/audio/audio.mp3',
             loop: true,
-            width:'200',
+            //width:'200',
+            enableControls: true
+        },{
+            xtype: 'audio',
+            cls: 'myAudio',
+            url: 'resources/audio/audio.mp3',
+            loop: true,
+            //width:'200',
             enableControls: true
         },
     ] : [
         {
             xtype: 'audio',
-            cls: 'myAudio',
+            //cls: 'myAudio',
+            url: 'resources/audio/audio.mp3',
+            loop: true
+        },
+        {
+            xtype: 'audio',
+            //cls: 'myAudio',
             url: 'resources/audio/audio.mp3',
             loop: true
         }
