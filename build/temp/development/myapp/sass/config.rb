@@ -1,1 +1,1 @@
-cache_path = '/home/reza/sencha-workstation/myapp/build/.sass-cache'
+cache_path = '/home/reza/Dokumen/myapp/build/.sass-cache'

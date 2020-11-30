@@ -1,2 +1,2 @@
 // @tag full-page
-// @require /home/reza/sencha-workstation/myapp/app.js
+// @require /home/reza/Dokumen/myapp/app.js

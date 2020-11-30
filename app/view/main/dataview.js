@@ -1,5 +1,6 @@
 Ext.define('myapp.view.main.dataview', {
     xtype:'bdv',
+    
     extend: 'Ext.Container',
 
     requires: [
@@ -51,6 +52,7 @@ Ext.define('myapp.view.main.dataview', {
             xtype: 'dataview',
             scrollable: 'y',
             cls: 'dataview-basic',
+            id:'bdv',
             itemTpl: 
             '<br><center>'+
             '<div class="card" style="width:300px">' +
@@ -59,7 +61,8 @@ Ext.define('myapp.view.main.dataview', {
             '<h2 class="card-title">Nama: {name}</h2>' +
             '<p class="card-text">Email: {email}</p>' + 
             '<p class="card-text">Phone: {phone}</p><br>' +
-            '<button class="btn btn-primary">Detail</button>' +
+            '<button type="button" class="btn btn-primary" onclick="onRemoveClick({user_id})">Delete</button>&nbsp' +
+            '<button type="button" class="btn btn-primary" onclick="onUpdateClick({user_id})">Edit</button>' +
             '</div>' +
             '</div><br>',
             bind:{
@@ -67,12 +70,4 @@ Ext.define('myapp.view.main.dataview', {
             }
         }],
     }],
-    listeners: {
-         element: 'element',
-         delegate: '.btn',
-         bind:'{record}',
-        Click: function (out, values, parent, xindex, xcount, xkey) {
-             Ext.Msg.alert('Detail','ini adalah detail', Ext.emptyFn);
-        },
-    }
 });

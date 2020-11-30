@@ -12,25 +12,9 @@ Ext.define('myapp.view.main.List', {
         store: '{personnel}'
     },
 
-    items: [
-        {
-            xtype: 'toolbar',
-            docked: 'top',
-            scrollable: {
-                y: false
-            },
-            items: [
-                {
-                    xtype:'button',
-                    text: 'Load data',
-                    ui: 'action',
-                    scope: this,
-                    listeners:{
-                        tap:'onReadClicked'
-                    }
-                }
-            ]}
-        ],
+    plugins: {
+        type: 'grideditable',
+    },
 
     viewModel:{
         stores:{
@@ -41,13 +25,14 @@ Ext.define('myapp.view.main.List', {
      },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name', width: 100 },
-        { text: 'Email', dataIndex: 'email', width: 230 },
-        { text: 'Phone', dataIndex: 'phone', width: 150 },
-        { text: 'Jurusan', dataIndex: 'jurusan', width: 150 }
+        { text: 'ID',  dataIndex: 'user_id', width: 100},
+        { text: 'Name',  dataIndex: 'name', width: 100, editable:true},
+        { text: 'Email', dataIndex: 'email', width: 230, editable:true },
+        { text: 'Phone', dataIndex: 'phone', width: 150, editable:true },
+        { text: 'Jurusan', dataIndex: 'jurusan', width: 150, editable:true }
     ],
 
-    listeners: {
-        select: 'onItemSelected'
-    }
+    // listeners: {
+    //     select: 'onItemSelected'
+    // }
 });

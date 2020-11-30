@@ -11,12 +11,13 @@ Ext.define('myapp.store.Personnel', {
         type: 'jsonp',
         api: {
             read    : "http://localhost/MyApp_php/personnel.php",
+            // create  : "http://localhost/MyApp_php/addPersonnel.php",
+            update  : "http://localhost/MyApp_php/updatePersonnel.php",
+            destroy  : "http://localhost/MyApp_php/removePersonnel.php"
         },
         reader: {
             type: 'json',
             rootProperty: 'items',
-            messageProperty: 'error',
-            url: 'simpsons'
         }        
     }
 });
